@@ -42,6 +42,7 @@ namespace Kurs
             O[1] = null;
         }
 
+
         public void SetPos(TCell Pos)
         {
             double L = g.Width; //сохранить размер игрового поля

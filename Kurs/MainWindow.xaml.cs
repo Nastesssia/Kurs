@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
@@ -139,7 +139,7 @@ namespace Kurs
         {
             if (IsGame)
             {
-                cmRun(null, null);
+               cmRun(null, null);
             }
             else
             {
@@ -271,5 +271,25 @@ namespace Kurs
                 }
             }
         }
+
+        private void CheckPlace_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Point x = e.GetPosition(this);
+            TCell cell= Pole.GetCell(x);
+            Pole.Who(cell, out CheckFor);
+
+        }
+
+        private void CheckPlace_MouseMove(object sender, MouseEventArgs e)
+        {
+            Point y = e.GetPosition(this);
+        }
+
+        private void CheckPlace_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            TCell cell= Pole.GetCell(e.GetPosition(this));
+            CheckFor.Pos.Set(cell);
+        }
+
     }
 }

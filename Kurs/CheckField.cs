@@ -142,7 +142,7 @@ namespace Kurs
 
                     Cell.Width = L8;
                     Cell.Height = L8;
-                    Cell.Margin = new Thickness(i * L8, j * L8, 0, 0);   //отступление от краёв доски
+                    Cell.Margin = new Thickness(i * L8, j * L8, 0, 0);   //отступление от края доски
                     g.Children.Add(Cell);
                 }
             }
@@ -193,7 +193,7 @@ namespace Kurs
     class TCell
     {
         public int i, j; // координаты клетки на поле
-        public TNote B;
+        public TNote B; //буква
         public int n;
 
         public TCell(int i, int j)
